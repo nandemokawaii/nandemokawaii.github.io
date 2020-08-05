@@ -3928,7 +3928,7 @@ input, select, textarea {
 
 			#header {
 				height: 100vh;
-				min-height: 0;
+				min-height: 35em;
 			}
 
 				#header .content {
