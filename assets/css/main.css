@@ -4180,3 +4180,6 @@ input, select, textarea {
 .va-bottom {
 	vertical-align: bottom;
 }
+.d-none {
+	display: none;
+}
