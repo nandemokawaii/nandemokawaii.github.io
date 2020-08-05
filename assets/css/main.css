@@ -1919,7 +1919,7 @@ input, select, textarea {
 			input[type="button"].icon,
 			button.icon,
 			.button.icon {
-				padding: 0;
+				padding: 0 1.35em;
 			}
 
 		}
@@ -3927,7 +3927,7 @@ input, select, textarea {
 		@media screen and (max-width: 980px) {
 
 			#header {
-				height: auto;
+				height: 100vh;
 				min-height: 0;
 			}
 
