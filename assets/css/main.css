@@ -2265,6 +2265,9 @@ input, select, textarea {
 	.icon {
 		color: #e0e0e0;
 	}
+	.icon.tab {
+		color: inherit;
+	}
 
 /* Image */
 
@@ -3776,6 +3779,14 @@ input, select, textarea {
 			box-shadow: 0 0 0 4px #4696e5, 0 0 0 5px rgba(255, 255, 255, 0.25);
 		}
 
+		#header img.logo {
+			width: 50%;
+		}
+
+		#header.small img.logo {
+			width: 20%;
+		}
+
 			#header .image.phone {
 				box-shadow: none;
 			}
@@ -3921,6 +3932,12 @@ input, select, textarea {
 			#header {
 				background-image: url("images/Background.png");
 			}
+			#header img.logo {
+				width: 90%;
+			}
+			#header.small img.logo {
+				width: 30%;
+			}
 
 		}
 
@@ -3940,6 +3957,12 @@ input, select, textarea {
 						-webkit-justify-content: center;
 						-ms-justify-content: center;
 						justify-content: center;
+					}
+					#header img.logo {
+						width: 90%;
+					}
+					#header.small img.logo {
+						width: 30%;
 					}
 
 		}
@@ -3965,6 +3988,14 @@ input, select, textarea {
 					overflow: hidden;
 				}
 
+				#header img.logo {
+					width: 90%;
+				}
+				#header.small img.logo {
+					width: 30%;
+				}
+		
+
 		}
 
 		@media screen and (max-width: 736px) {
@@ -3980,6 +4011,14 @@ input, select, textarea {
 				#header p {
 					font-size: 1em;
 					line-height: inherit;
+				}
+
+				#header img.logo {
+					width: 100%;
+				}
+
+				#header.small img.logo {
+					width: 40%;
 				}
 
 		}
@@ -3999,10 +4038,20 @@ input, select, textarea {
 					width: 15em;
 					max-width: 20vw;
 				}
+				
 
-					#header .image .inner, #header .image:before, #header .image:after {
-						font-size: 0.8em;
-					}
+				#header .image .inner, #header .image:before, #header .image:after {
+					font-size: 0.8em;
+				}
+
+				#header img.logo {
+					width: 100%;
+				}
+
+				#header.small img.logo {
+					width: 40%;
+				}
+		
 
 		}
 
@@ -4182,4 +4231,13 @@ input, select, textarea {
 }
 .d-none {
 	display: none;
+}
+
+.thumbnail:hover {
+    position:relative;
+	transform: scale(1.2);
+	transition: all .5s;
+    height:auto;
+    display:block;
+    z-index:999;
 }
