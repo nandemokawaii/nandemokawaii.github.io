@@ -29,12 +29,13 @@
 			function hidePreloader() {
 			var preloader = $('.lds-heart-wrapper');
 			preloader.fadeOut(preloaderFadeOutTime);
-			
+				disableScroll();
 			}
 			hidePreloader();
 			$body.addClass('is-preload');
 			window.setTimeout(function() {
 				$body.removeClass('is-preload');
+				enableScroll();
 			}, 1000);
 		});
 
@@ -58,6 +59,8 @@
 			.scrolly({
 				speed: 1500
 			});
+
+			
 
 	// Additional.
 		// $('#photocard-block').click(function() {
@@ -341,3 +344,18 @@ function magnify(imgID, zoom) {
     return {x : x, y : y};
   }
 }
+
+function disableScroll() { 
+	// Get the current page scroll position 
+	scrollTop = window.pageYOffset || document.documentElement.scrollTop; 
+	scrollLeft = window.pageXOffset || document.documentElement.scrollLeft, 
+  
+		// if any scroll is attempted, set this to the previous value 
+		window.onscroll = function() { 
+			window.scrollTo(0, 0); 
+		}; 
+} 
+  
+function enableScroll() { 
+	window.onscroll = function() {}; 
+} 
