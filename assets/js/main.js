@@ -5,9 +5,11 @@
 */
 
 (function($) {
+	
 
 	var	$window = $(window),
 		$body = $('body');
+		$header = $('#header');
 
 	// Breakpoints.
 		breakpoints({
@@ -21,9 +23,19 @@
 
 	// Play initial animations on page load.
 		$window.on('load', function() {
+			window.preloader
+			preloaderFadeOutTime = 2000;
+			function hidePreloader() {
+			var preloader = $('.lds-heart-wrapper');
+			preloader.fadeOut(preloaderFadeOutTime);
+			}
+			hidePreloader();
+			$body.addClass('is-preload');
 			window.setTimeout(function() {
 				$body.removeClass('is-preload');
-			}, 100);
+
+				
+			}, 2000);
 		});
 
 	// Mobile?
