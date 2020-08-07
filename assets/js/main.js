@@ -4,21 +4,6 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
-function disableScroll() { 
-	// Get the current page scroll position 
-	scrollTop = window.pageYOffset || document.documentElement.scrollTop; 
-	scrollLeft = window.pageXOffset || document.documentElement.scrollLeft, 
-  
-		// if any scroll is attempted, set this to the previous value 
-		window.onscroll = function() { 
-			window.scrollTo(0, 0); 
-		}; 
-} 
-  
-function enableScroll() { 
-	window.onscroll = function() {}; 
-} 
-
 (function($) {
 	var	$window = $(window),
 		$body = $('body');
@@ -357,3 +342,18 @@ function magnify(imgID, zoom) {
     return {x : x, y : y};
   }
 }
+
+function disableScroll() { 
+	// Get the current page scroll position 
+	scrollTop = window.pageYOffset || document.documentElement.scrollTop; 
+	scrollLeft = window.pageXOffset || document.documentElement.scrollLeft, 
+  
+		// if any scroll is attempted, set this to the previous value 
+		window.onscroll = function() { 
+			window.scrollTo(0, 0); 
+		}; 
+} 
+  
+function enableScroll() { 
+	window.onscroll = function() {}; 
+} 
