@@ -35,8 +35,6 @@
 			$body.addClass('is-preload');
 			window.setTimeout(function() {
 				$body.removeClass('is-preload');
-				$section.removeClass('d-none');
-				$footer.removeClass('d-none');
 			}, 1000);
 		});
 
