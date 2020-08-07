@@ -10,6 +10,8 @@
 	var	$window = $(window),
 		$body = $('body');
 		$header = $('#header');
+		$section = $('section');
+		$footer = $('footer');
 
 	// Breakpoints.
 		breakpoints({
@@ -31,8 +33,12 @@
 			}
 			hidePreloader();
 			$body.addClass('is-preload');
+			$section.addClass('d-none');
+			$footer.addClass('d-none');
 			window.setTimeout(function() {
 				$body.removeClass('is-preload');
+				$section.removeClass('d-none');
+				$footer.removeClass('d-none');
 
 				
 			}, 2000);
