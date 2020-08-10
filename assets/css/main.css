@@ -2309,7 +2309,6 @@ input, select, textarea {
 			margin: 0 0 2em 0;
 			width: 100%;
 		}
-
 			.image.fit img {
 				width: 100%;
 			}
@@ -3641,7 +3640,7 @@ input, select, textarea {
 	#header.small {
 		background-color: #fff;
 		color: #d1e5f9;
-		padding: 5.5em 0 2.5em 0 ;
+		padding: 1.5em 0 2.5em 0 ;
 		-moz-align-items: center;
 		-webkit-align-items: center;
 		-ms-align-items: center;
@@ -3659,8 +3658,8 @@ input, select, textarea {
 		background-position: center;
 		background-attachment: fixed, fixed;
 		background-size: cover;
-		height: 10vh;
-		min-height: 5em;
+		height: 1vh;
+		min-height: 1em;
 	}
 
 		#header input[type="submit"],
@@ -3784,7 +3783,7 @@ input, select, textarea {
 		}
 
 		#header.small img.logo {
-			width: 20%;
+			width: 10%;
 		}
 
 			#header .image.phone {
@@ -3892,6 +3891,10 @@ input, select, textarea {
 			margin: -3.5em 4em 0 0;
 		}
 
+		#header.small .content{
+			margin: 0.9em 4em 0 4em;
+		}
+
 			#header .content > :last-child {
 				margin-bottom: 0;
 			}
@@ -3936,9 +3939,9 @@ input, select, textarea {
 				width: 90%;
 			}
 			#header.small img.logo {
-				width: 30%;
+				width: 11%;
 			}
-
+			
 		}
 
 		@media screen and (max-width: 980px) {
@@ -3949,7 +3952,7 @@ input, select, textarea {
 			}
 
 				#header .content {
-					margin: -2em 4em 0 0;
+					margin: -2em 4em 0 4em;
 				}
 
 					#header .content .actions {
@@ -3962,7 +3965,7 @@ input, select, textarea {
 						width: 90%;
 					}
 					#header.small img.logo {
-						width: 30%;
+						width: 17%;
 					}
 
 		}
@@ -3992,7 +3995,7 @@ input, select, textarea {
 					width: 90%;
 				}
 				#header.small img.logo {
-					width: 30%;
+					width: 17%;
 				}
 		
 
@@ -4018,7 +4021,7 @@ input, select, textarea {
 				}
 
 				#header.small img.logo {
-					width: 40%;
+					width: 19%;
 				}
 
 		}
@@ -4030,7 +4033,7 @@ input, select, textarea {
 			}
 
 				#header .content {
-					margin: 0 2em 2em 0;
+					margin: 0 2em 2em 2em;
 				}
 
 				#header .image {
@@ -4049,7 +4052,7 @@ input, select, textarea {
 				}
 
 				#header.small img.logo {
-					width: 40%;
+					width: 19%;
 				}
 		
 
@@ -4064,6 +4067,10 @@ input, select, textarea {
 				#header .image {
 					font-size: 0.6em;
 					max-width: 60vw;
+				}
+
+				#header.small img.logo {
+					width: 33%;
 				}
 
 		}
@@ -4081,6 +4088,11 @@ input, select, textarea {
 			#header .actions {
 				font-size: 0.8em;
 			}
+
+			#header.small img.logo {
+				width: 33%;
+			}
+
 
 	}
 
@@ -4246,10 +4258,12 @@ input, select, textarea {
 	  transform: scale(0.9);
 	}
   }
+
 .lds-heart-wrapper{
 	background: #fff;
 	width: 100%;
-	height: 100vh;
+	height: 100%;
+	position: fixed;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -4309,4 +4323,90 @@ input, select, textarea {
     height:auto;
     display:block;
     z-index:999;
+}
+
+.addToCart {
+	color: #7a2ca2;
+}
+
+.addToCart i {
+	transition: all .5s;
+	position: absolute;
+	margin-top: -10%;
+}
+
+[id='toggle-heart'] {
+	position: absolute;
+	left: -100vw;
+	  
+	  &:checked + label {
+		  color: #e2264d;
+	  }
+  }
+  
+  [for='toggle-heart'] {
+	  align-self: center;
+	  color: #aab8c2;
+	  font-size: 2em;
+	  cursor: pointer;
+  }
+
+@keyframes heart { 0%, 17.5% { font-size: 0; } }
+
+[id='toggle-heart']:checked + label {
+  will-change: font-size;
+  animation: heart 1s cubic-bezier(.17, .89, .32, 1.49);
+}
+/* Modal */
+.modalDialog {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 99999;
+    opacity:0;
+    -webkit-transition: opacity 100ms ease-in;
+    -moz-transition: opacity 100ms ease-in;
+    transition: opacity 100ms ease-in;
+    pointer-events: none;
+}
+.modalDialog:target {
+    opacity:1;
+    pointer-events: auto;
+}
+.modalDialog > div {
+	max-width: 1000px;
+    width: 90%;
+    height: 74%;
+    position: relative;
+    margin: 5% auto;
+    padding: 20px;
+    border-radius: 3px;
+    background: #fff;
+}
+.close {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f26d7d;
+    color: #fff;
+    line-height: 25px;
+    position: absolute;
+    right: -12px;
+    text-align: center;
+    top: -10px;
+    width: 34px;
+    height: 34px;
+    text-decoration: none;
+    font-weight: bold;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    -moz-box-shadow: 1px 1px 3px #000;
+    -webkit-box-shadow: 1px 1px 3px #000;
+    box-shadow: 1px 1px 3px #000;
+    padding-top: 5px;
+}
+.close:hover {
+    background: #fa3f6f;
 }
