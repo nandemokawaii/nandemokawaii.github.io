@@ -2919,7 +2919,7 @@ input, select, textarea {
 /* Wrapper */
 
 	.wrapper {
-		padding: 4.5em 0 2.5em 0 ;
+		padding: 2.5em 0 2.5em 0 ;
 		background-color: #ffffff;
 		border-bottom: solid 2px #eeeeee;
 	}
@@ -3605,7 +3605,7 @@ input, select, textarea {
 	@media screen and (max-width: 480px) and (orientation: portrait) {
 
 		.wrapper {
-			padding: 2em 1em 0.1em 1em ;
+			padding: 2em 1em 2em 1em ;
 		}
 
 	}
