@@ -33,7 +33,7 @@
     $body.addClass('is-preload');
     window.setTimeout(function () {
       $body.removeClass('is-preload');
-    }, 1000);
+    }, 500);
   }); // Mobile?
 
   if (browser.mobile) $body.addClass('is-mobile');else {
