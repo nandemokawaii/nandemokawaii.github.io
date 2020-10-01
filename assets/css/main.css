@@ -4410,3 +4410,19 @@ input, select, textarea {
 .close:hover {
     background: #fa3f6f;
 }
+.soldout {
+	position: relative;
+}
+
+.soldout::after {
+	content: "";
+    background: url(../../images/icons/sold.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: left;
+    padding: 20px;
+    position: absolute;
+	top: 28px;
+    right: 2px;
+    z-index: 100;
+}

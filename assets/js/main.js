@@ -283,6 +283,16 @@
 
 		// });
 
+		$('#cards-maena-block').click(function() {		
+			$('#cards-maena-images').slideToggle();
+			$('#cards-once-images').slideUp();
+		});
+
+		$('#cards-once-block').click(function() {		
+			$('#cards-once-images').slideToggle();
+			$('#cards-maena-images').slideUp();
+		});
+
 
 		$('#addToCart').click(function(){
 			alert('yes');
