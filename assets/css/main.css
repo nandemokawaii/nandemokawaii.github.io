@@ -4416,7 +4416,7 @@ input, select, textarea {
 
 .soldout::after {
 	content: "";
-    background: url(../../images/icons/sold.png);
+    background: url(../../images/icons/sold.webp);
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: left;
@@ -4425,4 +4425,16 @@ input, select, textarea {
 	top: 28px;
     right: 2px;
     z-index: 100;
+}
+.buynow {
+	padding-bottom: 2em;
+	text-align: right;
+}
+.danger {
+	background-color: crimson;
+	color: #fff !important;
+}
+
+.danger:hover {
+	background-color: rgba(237, 20, 61, 0.8);
 }

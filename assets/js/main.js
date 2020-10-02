@@ -32,7 +32,7 @@
 			$body.addClass('is-preload');
 			window.setTimeout(function() {
 				$body.removeClass('is-preload');
-			}, 500);
+			}, 200);
 		});
 
 	// Mobile?
