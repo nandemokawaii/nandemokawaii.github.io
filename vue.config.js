@@ -1,5 +1,7 @@
 // vue.config.js
 module.exports = {
   runtimeCompiler: true,
-  publicPath: '/nandemokawaii.github.io/',
+  publicPath: process.env.NODE_ENV === 'production'
+    ? '/nandemokawaii.github.io/'
+    : '/'
 };
