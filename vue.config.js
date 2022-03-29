@@ -2,6 +2,6 @@
 module.exports = {
   runtimeCompiler: true,
   publicPath: process.env.NODE_ENV === 'production'
-    ? '/nandemokawaii.github.io/'
+    ? 'nandemokawaii.github.io/'
     : '/'
 };
